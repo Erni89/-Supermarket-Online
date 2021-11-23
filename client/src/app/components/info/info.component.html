@@ -1,0 +1,28 @@
+<div class="container">
+
+    <div class="general">
+        <h2>Some data about my store:</h2>
+        <p>
+            There is {{countOrders}} orders in store <br>
+            There is {{countProducts}} products in store
+        </p>
+    </div>
+
+
+    <div *ngIf='_userService.loggedUser' class="afterLogin">
+        <h1>Hey {{_userService.user.firstName}}</h1>
+        <h1 *ngIf='noCart'> start your first shopping</h1>
+
+
+        <div *ngIf='!noCart && openCart' class="openCart">
+            <h1> You have open cart from {{cartCreated |date}}, </h1>
+            <h1 *ngIf="cartTotalPrice==0"> but still don't have any product</h1>
+            <h1 *ngIf="cartTotalPrice>0"> price {{cartTotalPrice}}, </h1>
+        </div>
+        <div *ngIf='!noCart && !openCart' class="openCart">
+            <h1> Your last purchase was made at: {{lastcloseCart | date}}, </h1>
+        </div>
+
+
+    </div>
+</div>

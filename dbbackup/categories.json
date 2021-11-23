@@ -1,0 +1,37 @@
+[{
+  "_id": {
+    "$oid": "6054cb3a1718ad30c8b17184"
+  },
+  "name": "Milk",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6054cb3a1718ad30c8b17185"
+  },
+  "name": "Vegetables",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6054cb3a1718ad30c8b17186"
+  },
+  "name": "Meat",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6054cb3a1718ad30c8b17187"
+  },
+  "name": "Drink",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6054cb3a1718ad30c8b17188"
+  },
+  "name": "Fruits",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60695df84b84d12bc0b7ffaa"
+  },
+  "name": "Plastic",
+  "__v": 0
+}]

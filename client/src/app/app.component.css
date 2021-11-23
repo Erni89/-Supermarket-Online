@@ -1,0 +1,12 @@
+.container {
+    height: 12vh; 
+    display: flex;
+        
+}
+
+app-navbar {
+    width: 100%;
+    background-color: #FFB6C1;
+    display: flex;
+    align-items: center;
+}

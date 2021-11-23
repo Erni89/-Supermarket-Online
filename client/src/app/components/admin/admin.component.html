@@ -1,0 +1,97 @@
+<div class="header">
+  <button mat-stroked-button color="primary">
+    <a routerLink='add'>Add new Product</a>
+  </button>
+
+  <form *ngIf="!newSearch" [formGroup]="myFormSearch" class="searchPro" >
+    <input type="search" formControlName="name" placeholder="Enter product name">
+    <mat-icon (click)="searchProduct($event)" (click)="closeNav()" >search</mat-icon>
+  </form>
+  <button *ngIf="newSearch" (click)="fornewSearch()">new search</button>
+</div>
+
+<div class="main">
+  <div class="sidenav" [ngStyle]="{'width': myWidthSide,'margin-left':myMarginSide}">
+    <mat-icon class="closebtn" (click)="closeNav()">cancel</mat-icon>
+    <mat-icon class="add" routerLink='add'>add</mat-icon>
+    <form [formGroup]="myForm" (ngSubmit)="handle_submit()">
+      <mat-form-field appearance="outline">
+        <mat-label>Product name</mat-label>
+        <input matInput placeholder="enter Product name" formControlName="name">
+        <mat-error *ngIf="myForm.controls.name.invalid">invalid value</mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Category </mat-label>
+        <mat-select matNativeControl formControlName="category" class="from-control">
+          <mat-option *ngFor="let n of categories" [value]="n._id">{{n.name}}</mat-option>
+        </mat-select>
+        <mat-error *ngIf="myForm.controls.category.invalid">invalid value</mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label> Price</mat-label>
+        <input matInput placeholder="enter price" formControlName="price">
+        <mat-error *ngIf="myForm.controls.name.invalid">invalid value</mat-error>
+      </mat-form-field>
+      <label>this your img you can enter new </label>
+      <img *ngIf="selectedImg" src="http://localhost:1000/getimage/{{selectedImg}}">
+      <div class="changeImg">
+        <label>Chose image or enter url image</label>
+        <div class="imgUpload">
+          <input type="file" accept="image/*" placeholder="Chose image" (change)="selectImage($event)" />
+        </div>
+        <mat-form-field appearance="outline">
+          <mat-label> Url image</mat-label>
+          <input matInput placeholder="enter url" formControlName="url">
+        </mat-form-field>
+          <button [disabled]="myForm.controls.name.invalid" type="submit" mat-raised-button color="primary">Edit
+        Product</button>
+      </div>
+    
+    </form>
+  </div>
+
+  <div class="container">
+    <mat-tab-group mat-align-tabs="center" *ngIf="!showResult" [ngStyle]="{'margin-left':myMargin}">
+      <mat-tab *ngFor="let cat of categories" label={{cat.name}}>
+        <div class="myProducts" [ngStyle]="{'margin-left':myMargin}">
+          <div *ngFor="let pro of products">
+            <mat-card *ngIf='cat.name==pro.category.name'>
+              <mat-card-header>
+                <mat-card-title>Name: {{pro.name}}</mat-card-title>
+                <mat-card-subtitle>Category: {{pro.category.name}}</mat-card-subtitle>
+              </mat-card-header>
+              <img mat-card-image src='http://localhost:1000/getimage/{{pro.img}}' alt="Photo of product: {{pro.name}}">
+              <mat-card-content>
+                <mat-dialog-content>Price: {{pro.price}}</mat-dialog-content>
+                <mat-icon id="{{pro._id}}" (click)="openNav($event)">edit</mat-icon>
+              </mat-card-content>
+            </mat-card>
+          </div>
+        </div>
+      </mat-tab>
+    </mat-tab-group>
+    <div *ngIf="showResult" class="search">
+      <div class="myProductsResault" [ngStyle]="{'margin-left':myMargin}">
+        <div class="noResault" *ngIf="!answerSearch.length">
+          <h1>
+            Not found product</h1>
+        </div>
+        <mat-card *ngFor="let ser of answerSearch ">
+          <mat-card-header>
+            <mat-card-title>Name: {{ser.name}}</mat-card-title>
+            <mat-card-subtitle>Category: {{ser.category.name}}</mat-card-subtitle>
+          </mat-card-header>
+          <img mat-card-image src='http://localhost:1000/getimage/{{ser.img}}' alt="Photo of product: {{ser.name}}">
+          <mat-card-content>
+            <mat-dialog-content>Price: {{ser.price}}</mat-dialog-content>
+            <mat-icon id="{{ser._id}}" (click)="openNav($event)">edit</mat-icon>
+          </mat-card-content>
+        </mat-card>
+        <button mat-flat-button color="primary" [ngStyle]="{'width':'100%' ,'height':'50px'}"
+          (click)="fornewSearch()" (click)="closeNav()">back to product</button>
+      </div>
+    </div>
+  </div>
+</div>
+<router-outlet>
+</router-outlet>

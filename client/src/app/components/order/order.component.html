@@ -1,0 +1,76 @@
+<div *ngIf="!afterOrder" class="beforeorder">
+
+
+    <div class="search">
+        <label> search on product: </label>
+        <input type="text" (keyup)="mark($event)" placeholder="Start enter product name">
+
+    </div>
+    <div class="container">
+        <div class="product">
+            <a class="back" [routerLink]="['/main/shop']" routerLinkActive="router-link-active">back to shopping</a>
+            <h2>my cart <br> total price: {{cartTotalPrice | number : '1.2-2'}}</h2>
+            <div class="card">
+                <mat-card *ngFor="let item of cartItem">
+                    <mat-card-header>
+                        <mat-card-title [ngClass]="{'searchResult': searchRes.includes(item.product.name)}">
+                            {{item.product.name}}
+                        </mat-card-title>
+
+                        <mat-card-title>amount: {{item.amount}}</mat-card-title>
+                        <mat-card-title>price: {{item.amount * item.product.price| number : '1.2-2'}}</mat-card-title>
+                    </mat-card-header>
+                    <img mat-card-image src='http://localhost:1000/getimage/{{item.product.img}}'
+                        alt="Photo of product: {{item.product.name}}">
+                </mat-card>
+            </div>
+        </div>
+        <div class="order">
+            <h2>order</h2>
+            <h3>Shipping Details:</h3>
+            <form [formGroup]="myFormOrder">
+                <label> can you enter 1-2 tav for filter</label>
+                <mat-form-field appearance="fill">
+                    <mat-label>City</mat-label>
+                    <mat-select matNativeControl formControlName="city" class="from-control">
+                        <mat-option (dblclick)="forcity()" *ngFor="let n of israelCity" [value]="n">{{n}}</mat-option>
+                    </mat-select>
+                    <mat-error *ngIf="myFormOrder.controls.city.invalid">invalid value</mat-error>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Street</mat-label>
+                    <input (dblclick)="forStreet()" matInput placeholder="enter street" formControlName="street">
+                    <mat-error *ngIf="myFormOrder.controls.street.invalid">invalid value</mat-error>
+                </mat-form-field>
+
+
+
+
+                <mat-form-field appearance="outline">
+                    <input (change)="checkshippingDate($event)" type="date" matInput min="{{minDate|date:'yyyy-MM-dd'}}"
+                        placeholder="enter date" formControlName="shippingDate">
+                    <mat-error *ngIf="myFormOrder.controls.street.invalid">invalid value</mat-error>
+                </mat-form-field>
+
+
+
+
+                <label>enter 4-16 digit </label>
+                <mat-form-field appearance="outline">
+                    <mat-label>payment</mat-label>
+                    <input type="text" matInput placeholder="enter cc number" formControlName="visa4Digits">
+                    <mat-error *ngIf="myFormOrder.controls.visa4Digits.invalid">invalid value</mat-error>
+                </mat-form-field>
+                <button [disabled]="myFormOrder.invalid" (click)="orderTodb()" mat-flat-button
+                    color="primary">order</button>
+            </form>
+        </div>
+    </div>
+
+</div>
+<div *ngIf="afterOrder" class="afterorder">
+    <h1 class="titlereceipt">Your purchase was made successfully</h1>
+    <h1 class="downRece">To download the receipt,<span (click)="downrece()"> click here </span></h1>
+    <button (click)="end()" class="goHome" mat-raised-button color="primary">Home</button>
+</div>

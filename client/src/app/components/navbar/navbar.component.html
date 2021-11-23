@@ -1,0 +1,16 @@
+<div class="main">
+    <img src="http://localhost:1000/getimage/logo.png" alt="logo">
+    <h3 *ngIf="_userService.loggedUser "> welcome {{this._userService.user.firstName}} good to see you again</h3>
+    <h3 *ngIf="_userService.loggedUser && this._userService.user.role=='admin' ">For only admin</h3>
+    <h3 *ngIf="!_userService.loggedUser ">welcome guest good to see you </h3>
+    <button *ngIf="_userService.loggedUser " (click)="_userService.logout('you logged out successfully')">logoff</button>
+</div>
+
+
+
+
+
+
+
+
+

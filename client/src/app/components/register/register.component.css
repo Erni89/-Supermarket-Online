@@ -1,0 +1,59 @@
+.register {
+    height: 100%;
+}
+
+form {
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.partOne, .partTwo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 120px;
+    max-width: 250px;
+    width: 90%;
+}
+
+mat-form-field, p, button, label {
+    width: 65%;
+}
+
+label {
+    margin: 10px;
+}
+
+.titleStep {
+    color: brown;
+    font-size: larger;
+    font-weight: bold;
+}
+
+span {
+    color: blue;
+}
+
+span:hover {
+    color: red;
+    text-decoration-line: underline;
+}
+
+.example-button-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* width: 50%; */
+    margin: 10px auto;
+}
+
+.forrole:hover {
+    display: block;
+}

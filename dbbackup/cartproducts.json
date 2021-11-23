@@ -1,0 +1,353 @@
+[{
+  "_id": {
+    "$oid": "60688283834d2e092cb78f09"
+  },
+  "cart": {
+    "$oid": "60688277834d2e092cb78f08"
+  },
+  "products": [
+    {
+      "amount": 1,
+      "totalPrice": 6.9,
+      "_id": {
+        "$oid": "606882ed834d2e092cb78f0b"
+      },
+      "product": {
+        "$oid": "6059836f58178d2b7c71854a"
+      }
+    },
+    {
+      "amount": 2,
+      "totalPrice": 18.6,
+      "_id": {
+        "$oid": "60688317834d2e092cb78f0c"
+      },
+      "product": {
+        "$oid": "605d40726636ce2cd85578ed"
+      }
+    },
+    {
+      "amount": 1,
+      "totalPrice": 6.9,
+      "_id": {
+        "$oid": "606883c0834d2e092cb78f0d"
+      },
+      "product": {
+        "$oid": "6059836f58178d2b7c71854a"
+      }
+    }
+  ],
+  "__v": 6,
+  "cartTotalPrice": 37.2
+},{
+  "_id": {
+    "$oid": "606958097aafdb399c3a3eb0"
+  },
+  "cartTotalPrice": 47,
+  "cart": {
+    "$oid": "60695397269790204c74d752"
+  },
+  "products": [
+    {
+      "amount": 2,
+      "totalPrice": 13.8,
+      "_id": {
+        "$oid": "60696c3001ac601dd84904e1"
+      },
+      "product": {
+        "$oid": "6059836f58178d2b7c71854a"
+      }
+    },
+    {
+      "amount": 1,
+      "totalPrice": 6.9,
+      "_id": {
+        "$oid": "60696c5501ac601dd84904e2"
+      },
+      "product": {
+        "$oid": "6059836f58178d2b7c71854a"
+      }
+    },
+    {
+      "amount": 1,
+      "totalPrice": 12.5,
+      "_id": {
+        "$oid": "60696ce301ac601dd84904e3"
+      },
+      "product": {
+        "$oid": "605e6f735de5bd4f4403e8b7"
+      }
+    },
+    {
+      "amount": 1,
+      "totalPrice": 6.9,
+      "_id": {
+        "$oid": "60696d5c01ac601dd84904e4"
+      },
+      "product": {
+        "$oid": "6059836f58178d2b7c71854a"
+      }
+    },
+    {
+      "amount": 1,
+      "totalPrice": 6.9,
+      "_id": {
+        "$oid": "60696d5f01ac601dd84904e5"
+      },
+      "product": {
+        "$oid": "6059836f58178d2b7c71854a"
+      }
+    }
+  ],
+  "__v": 7
+},{
+  "_id": {
+    "$oid": "606999923d9b8f115430d67f"
+  },
+  "cartTotalPrice": 47.8,
+  "cart": {
+    "$oid": "6069998b3d9b8f115430d67e"
+  },
+  "products": [
+    {
+      "amount": 1,
+      "totalPrice": 6.9,
+      "_id": {
+        "$oid": "606999923d9b8f115430d680"
+      },
+      "product": {
+        "$oid": "6059836f58178d2b7c71854a"
+      }
+    },
+    {
+      "amount": 5,
+      "totalPrice": 34.5,
+      "_id": {
+        "$oid": "6069e908afd38e077c75e9ac"
+      },
+      "product": {
+        "$oid": "6059836f58178d2b7c71854a"
+      }
+    },
+    {
+      "amount": 2,
+      "totalPrice": 6.4,
+      "_id": {
+        "$oid": "6069e919afd38e077c75e9ad"
+      },
+      "product": {
+        "$oid": "605e69facd87ed024cf9489a"
+      }
+    }
+  ],
+  "__v": 2
+},{
+  "_id": {
+    "$oid": "606a2be21bdd6e041c0cb55f"
+  },
+  "cartTotalPrice": 13.8,
+  "cart": {
+    "$oid": "606a2bdf1bdd6e041c0cb55e"
+  },
+  "products": [
+    {
+      "amount": 1,
+      "totalPrice": 6.9,
+      "_id": {
+        "$oid": "606a2be21bdd6e041c0cb560"
+      },
+      "product": {
+        "$oid": "6059836f58178d2b7c71854a"
+      }
+    },
+    {
+      "amount": 1,
+      "totalPrice": 6.9,
+      "_id": {
+        "$oid": "606a2be31bdd6e041c0cb561"
+      },
+      "product": {
+        "$oid": "6059836f58178d2b7c71854a"
+      }
+    }
+  ],
+  "__v": 1
+},{
+  "_id": {
+    "$oid": "606a2c6d1bdd6e041c0cb564"
+  },
+  "cartTotalPrice": 6.9,
+  "cart": {
+    "$oid": "606a2c681bdd6e041c0cb563"
+  },
+  "products": [
+    {
+      "amount": 1,
+      "totalPrice": 6.9,
+      "_id": {
+        "$oid": "606a2c6d1bdd6e041c0cb565"
+      },
+      "product": {
+        "$oid": "6059836f58178d2b7c71854a"
+      }
+    }
+  ],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "606a2d8f3ae33322c462e002"
+  },
+  "cartTotalPrice": 13.8,
+  "cart": {
+    "$oid": "606a2d8c3ae33322c462e001"
+  },
+  "products": [
+    {
+      "amount": 1,
+      "totalPrice": 6.9,
+      "_id": {
+        "$oid": "606a2d8f3ae33322c462e003"
+      },
+      "product": {
+        "$oid": "6059836f58178d2b7c71854a"
+      }
+    },
+    {
+      "amount": 1,
+      "totalPrice": 6.9,
+      "_id": {
+        "$oid": "606a2d8f3ae33322c462e004"
+      },
+      "product": {
+        "$oid": "6059836f58178d2b7c71854a"
+      }
+    }
+  ],
+  "__v": 1
+},{
+  "_id": {
+    "$oid": "606a2e4980e53234ac5b39d5"
+  },
+  "cartTotalPrice": 6.9,
+  "cart": {
+    "$oid": "606a2e4580e53234ac5b39d4"
+  },
+  "products": [
+    {
+      "amount": 1,
+      "totalPrice": 6.9,
+      "_id": {
+        "$oid": "606a2e4980e53234ac5b39d6"
+      },
+      "product": {
+        "$oid": "6059836f58178d2b7c71854a"
+      }
+    }
+  ],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "606a2fbc9168e2342ca25d6a"
+  },
+  "cartTotalPrice": 6.9,
+  "cart": {
+    "$oid": "606a2fb99168e2342ca25d69"
+  },
+  "products": [
+    {
+      "amount": 1,
+      "totalPrice": 6.9,
+      "_id": {
+        "$oid": "606a2fbc9168e2342ca25d6b"
+      },
+      "product": {
+        "$oid": "6059836f58178d2b7c71854a"
+      }
+    }
+  ],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "606a30299aa9c2161800f0be"
+  },
+  "cartTotalPrice": 6.9,
+  "cart": {
+    "$oid": "606a30249aa9c2161800f0bd"
+  },
+  "products": [
+    {
+      "amount": 1,
+      "totalPrice": 6.9,
+      "_id": {
+        "$oid": "606a30299aa9c2161800f0bf"
+      },
+      "product": {
+        "$oid": "6059836f58178d2b7c71854a"
+      }
+    }
+  ],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "606a305663da4137400ff6be"
+  },
+  "cartTotalPrice": 6.9,
+  "cart": {
+    "$oid": "606a304e63da4137400ff6bd"
+  },
+  "products": [
+    {
+      "amount": 1,
+      "totalPrice": 6.9,
+      "_id": {
+        "$oid": "606a305663da4137400ff6bf"
+      },
+      "product": {
+        "$oid": "6059836f58178d2b7c71854a"
+      }
+    }
+  ],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "606a33560419af1818b1598a"
+  },
+  "cartTotalPrice": 6.9,
+  "cart": {
+    "$oid": "606a33520419af1818b15989"
+  },
+  "products": [
+    {
+      "amount": 1,
+      "totalPrice": 6.9,
+      "_id": {
+        "$oid": "606a33560419af1818b1598b"
+      },
+      "product": {
+        "$oid": "6059836f58178d2b7c71854a"
+      }
+    }
+  ],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "606a60a240fc7e208c7d7779"
+  },
+  "cartTotalPrice": 6.9,
+  "cart": {
+    "$oid": "606a609f40fc7e208c7d7778"
+  },
+  "products": [
+    {
+      "amount": 1,
+      "totalPrice": 6.9,
+      "_id": {
+        "$oid": "606a60a240fc7e208c7d777a"
+      },
+      "product": {
+        "$oid": "6059836f58178d2b7c71854a"
+      }
+    }
+  ],
+  "__v": 0
+}]

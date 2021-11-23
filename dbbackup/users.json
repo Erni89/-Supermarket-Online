@@ -1,0 +1,40 @@
+[{
+  "_id": {
+    "$oid": "60473350fade8b14b0255811"
+  },
+  "role": "admin",
+  "firstName": "admin",
+  "lastName": "admin",
+  "email": "aaaaaaa07@gmail.com",
+  "userId": 204166425,
+  "password": "$2b$10$1S0nWbF.UNtc46qT4wJnUOnJu96JM.byZvUw2YW3z59M4Y5XOFUOe",
+  "city": "A'SAM",
+  "street": "admin",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "604b116ce28ee00824a4fac3"
+  },
+  "role": "user",
+  "firstName": "aharon",
+  "lastName": "yeru",
+  "email": "aharon.yerushalmi@gmail.com",
+  "userId": 201204112,
+  "password": "$2b$10$Hvf6xmdWWoQzVo8hV9j0OOyyX4tj.CywJRcIzUpl.Blc70UaknZbK",
+  "city": "JERUSALEM",
+  "street": "tttt",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60616b2dc9cfd94394e2346a"
+  },
+  "role": "user",
+  "firstName": "erer",
+  "lastName": "erer",
+  "email": "aaaa@gmail.com",
+  "userId": 52637659,
+  "password": "$2b$10$EGc0UohL7.vQHL1F1wmdpODiYgGnd2jrj2eB/Vj21itLUgyp5x1dW",
+  "city": "RA'ANANA",
+  "street": "rrr",
+  "__v": 0
+}]

@@ -1,0 +1,91 @@
+.container {
+    height: 100%;
+    
+}
+
+form {
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 25px auto 0 auto;
+}
+
+mat-form-field, p, button, label {
+    width: 65%;
+}
+
+label {
+    margin: 10px;
+}
+
+span {
+    color: blue;
+}
+
+span:hover {
+    color: red;
+    text-decoration-line: underline;
+}
+
+.example-button-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 10px auto;
+}
+
+.mat-success {
+    background-color: green;
+    color: #fff;
+}
+
+h3 {
+    color: blueviolet;
+    font-size: larger;
+    font-weight: bold;
+}
+
+.second {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.one {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 20px auto;
+    padding: 15px;
+}
+
+.hide {
+    display: none;
+}
+
+.createCart:hover+.hide {
+    font-size: large;
+    display: block;
+    color: red;
+}
+
+.one>button {
+    background: white;
+    color: red;
+    border: .5px solid black;
+}
+
+.one>button:hover{
+    cursor: pointer;
+    background:rgb(114, 114, 228);
+    color: white;
+}

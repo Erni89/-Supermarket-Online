@@ -1,0 +1,16 @@
+.container{
+    display:flex ;
+    flex-direction: column;
+    margin:15% auto;
+}
+img{
+    width: 75%;
+    margin: 5px auto;
+}
+p{
+    font-family: 'Shadows Into Light', cursive;
+    text-align: center;
+    width: 75%;
+    margin: 15px auto;
+    padding: 5px;
+}

@@ -1,0 +1,50 @@
+<div class="container">
+    <div class="main">
+        <form *ngIf="!addCate" [formGroup]="myForm" (ngSubmit)="handle_submit($event)">
+            <h1>Add new product</h1>
+            <label>Select category or <span (click)="addCate=!addCate">add new category</span> </label>
+            <mat-form-field appearance="fill">
+                <mat-label>Category</mat-label>
+                <mat-select matNativeControl formControlName="category" class="from-control">
+                    <mat-option *ngFor="let n of categories" [value]="n._id">{{n.name}}</mat-option>
+                </mat-select>
+                <mat-error *ngIf="myForm.controls.category.invalid">invalid value</mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Product name</mat-label>
+                <input matInput placeholder="enter Product name" formControlName="name">
+                <mat-error *ngIf="myForm.controls.name.invalid">invalid value</mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label> Price</mat-label>
+                <input matInput placeholder="enter price" formControlName="price">
+                <mat-error *ngIf="myForm.controls.name.invalid">invalid value</mat-error>
+            </mat-form-field>
+            <label>Chose image or enter url image</label>
+            <div class="imgUpload">
+                <mat-label></mat-label>
+                <input  type="file"  accept="image/*" placeholder="Chose image" (change)="selectImage($event)" />
+            </div>
+            <mat-form-field appearance="outline">
+                <mat-label> Url image</mat-label>
+                <input matInput placeholder="enter url" formControlName="url">
+            </mat-form-field>
+            <button [disabled]="myForm.controls.name.invalid" type="submit" mat-raised-button color="primary">Add new Product</button>
+            
+        </form>
+    </div>
+    
+    <div class="second">
+        <form *ngIf="addCate" class="second" [formGroup]="myFormCategory" (ngSubmit)="addCategoties()">
+            <h1>Add new category</h1>
+            <mat-form-field appearance="outline">
+                <mat-label>Category name</mat-label>
+                <input matInput placeholder="enter Category name" formControlName="name">
+                <mat-error *ngIf="myForm.controls.name.invalid">invalid value</mat-error>
+            </mat-form-field>
+            <button [disabled]="myFormCategory.controls.name.invalid" type="submit" mat-raised-button color="primary">Add category</button>
+            <span (click)="addCate=!addCate">Cancel</span>
+        </form>
+    </div>
+    <a routerLink=''>Back to Edit</a>
+</div>

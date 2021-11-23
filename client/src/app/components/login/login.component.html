@@ -1,0 +1,46 @@
+<div *ngIf='!_userService.loggedUser' class="container">
+
+    <form [formGroup]="myForm" (ngSubmit)="handle_submitLogin()">
+        <h3>Login</h3>
+        <mat-form-field appearance="outline">
+            <mat-label>Enter your ID Email</mat-label>
+            <input matInput placeholder="enter ID Email" formControlName="username">
+            <mat-error *ngIf="myForm.controls.username.invalid">invalid value</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Enter your password</mat-label>
+            <input matInput [type]="hide ? 'password' : 'text'" formControlName="password">
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                [attr.aria-pressed]="hide">
+                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+            <mat-error *ngIf="myForm.controls.password.invalid">invalid value</mat-error>
+        </mat-form-field>
+
+        <input type="submit" value="Login" [disabled]="myForm.controls.username.invalid">
+
+    </form>
+    <div class="example-button-row">
+        <label>Don't have an account yet?
+            <span (click)="logToReg()">Register</span>
+        </label>
+
+    </div>
+
+</div>
+<div *ngIf='_userService.loggedUser' class="second">
+    <div class="one">
+        <h3 *ngIf='!answerCart[0]'>
+            {{title}}
+        </h3>
+        <button *ngIf=' this._cartService.cartUser.length>0' (click)="_r.navigateByUrl('/main/shop')" class='createCart'
+            color="primary">
+            Resume shopping
+        </button>
+        <button *ngIf='this._cartService.cartUser.length==0' class='createCart' color="primary"
+            (click)="addNewCartUser()">
+            start shopping
+        </button>
+    </div>
+
+</div>

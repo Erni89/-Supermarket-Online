@@ -1,0 +1,33 @@
+
+.main{
+    margin: 0 auto;
+    display: flex;
+    width: 90%;
+}
+img{
+    flex-grow: 0;   
+    border-radius: 50%;
+    width: 50px;
+    margin: 0 auto;
+}
+h3{
+    text-align: center;
+    flex-grow: 2;   
+    margin: auto;
+    font-weight: bold;  
+    font-size: x-large;
+}
+button{
+    flex-grow: 0.5;
+    margin: 5px auto;
+    color: rgb(49, 36, 153);
+    background-color: violet;
+    border: 1px solid black;
+    font-size: larger;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: rgba(228, 41, 72, 0.531);
+    color: white;
+}

@@ -1,0 +1,91 @@
+<div class="register">
+    <form [formGroup]="myForm" (ngSubmit)="handle_submit()">
+
+        <div class="partOne" *ngIf="this._userService.step1">
+            <label class="titleStep">Register Step 1</label>
+            <mat-form-field appearance="outline">
+                <mat-label>Enter ID</mat-label>
+                <input matInput placeholder="enter ID" formControlName="userId">
+                <mat-error *ngIf="myForm.controls.userId.invalid">invalid value</mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Enter email</mat-label>
+                <input matInput placeholder="enter email" formControlName="email">
+                <mat-error *ngIf="myForm.controls.email.invalid">invalid value</mat-error>
+            </mat-form-field>
+            <label [ngStyle]="{'display': hidden}">Password must contain 6-8 char like:  'A a 1 !'</label>
+            <mat-form-field  appearance="outline">
+                <mat-label>Enter password </mat-label>
+                <input (blur)="hidden='none'" (keyup)="hidden=''" matInput [type]="hide ? 'password' : 'text'" formControlName="password">
+                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                    [attr.aria-pressed]="hide">
+                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+                <mat-error *ngIf="myForm.controls.password.invalid">invalid value</mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Confirm password</mat-label>
+                <input matInput [type]="hide2 ? 'password' : 'text'" formControlName="confirmPassword">
+                <button mat-icon-button matSuffix (click)="hide2 = !hide2" [attr.aria-label]="'Hide password'"
+                    [attr.aria-pressed]="hide">
+                    <mat-icon>{{hide2 ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+                <mat-error *ngIf="myForm.controls.confirmPassword.invalid">invalid value</mat-error>
+            </mat-form-field>
+
+            <span *ngIf="myForm.controls.password.value != myForm.controls.confirmPassword.value &&
+             myForm.controls.confirmPassword.dirty">Password match is required
+            </span>
+            <button  (click)="checkStep1($event,myForm.controls.userId.value,myForm.controls.email.value)"
+                [disabled]="myForm.controls.password.invalid || myForm.controls.confirmPassword.invalid || 
+            myForm.controls.userId.invalid || myForm.controls.email.invalid || myForm.controls.password.value != myForm.controls.confirmPassword.value">
+               Next step
+            </button>
+        </div>
+
+
+        <!-- *ngIf="!this._userService.step1" -->
+        <div class="partTwo" *ngIf="!this._userService.step1">
+            <label class="titleStep">Register Step 2</label>
+            <mat-form-field appearance="outline">
+                <mat-label>First name</mat-label>
+                <input matInput placeholder="enter first Name" formControlName="firstName">
+                <mat-error *ngIf="myForm.controls.firstName.invalid">invalid value</mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Last name</mat-label>
+                <input matInput placeholder="enter last Name" formControlName="lastName">
+                <mat-error *ngIf="myForm.controls.lastName.invalid">invalid value</mat-error>
+            </mat-form-field>
+
+            <label> can you enter 1-2 tav for filter</label>
+            <mat-form-field appearance="fill">
+                <mat-label>City</mat-label>
+                <mat-select matNativeControl formControlName="city" class="from-control">
+                    <mat-option *ngFor="let n of israelCity" [value]="n">{{n}}</mat-option>
+                </mat-select>
+                <mat-error *ngIf="myForm.controls.city.invalid">invalid value</mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Street</mat-label>
+                <input matInput placeholder="enter street" formControlName="street">
+                <mat-error *ngIf="myForm.controls.street.invalid">invalid value</mat-error>
+            </mat-form-field>
+
+            <input type="submit" value="Register"
+                [disabled]="myForm.controls.firstName.invalid ||myForm.controls.lastName.invalid || myForm.controls.city.invalid || myForm.controls.street.invalid">
+        </div>
+
+
+    </form>
+
+
+    <div  class="example-button-row">
+        <label>Already have an account?
+            <span (click)="logToReg()">Login</span>
+        </label>
+    </div>
+
+</div>

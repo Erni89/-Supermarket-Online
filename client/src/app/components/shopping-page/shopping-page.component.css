@@ -1,0 +1,150 @@
+.container {
+    height: 80%;
+    width: 100%;
+    display: flex;
+}
+
+.first {
+    height: 80%;
+    width: 25%;
+    border: 3px solid red;
+    margin-bottom: 5px;
+
+   
+}
+
+.card {
+    height: 85%;
+    overflow: auto;
+    
+}
+
+.second {
+    height: 85%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.myProducts {
+    margin: 5px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+mat-card {
+    margin: 7px;
+    border: 1px saddlebrown solid;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+img {
+    width: 120px;
+    height: 100px;
+    background-size: cover;
+    margin: 0 auto;
+}
+
+mat-tab-group {
+    width: 100%;
+    
+}
+
+
+mat-card-content {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+mat-card-title {
+    color: blue;
+}
+
+form {
+    margin: 5px;
+    display: flex;
+}
+
+button {
+    margin: 5px;
+}
+
+.pro {
+    position: absolute;
+    right: 10%;
+    bottom: 10%
+}
+
+mat-icon:hover {
+    color: blue;
+    cursor: pointer;
+}
+
+.noResault {
+    text-align: center;
+    margin: 15px auto;
+}
+
+.myProductsResault {
+    margin: 5px auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+h3 {
+    width: 100%;
+    border-bottom: 1px solid black;
+    text-align: center;
+}
+
+.sidebarbtn {
+    display: flex;
+    height: 5%;
+}
+
+.order {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 15px auto;
+    color: blue;
+}
+
+.popup {
+    height: 35%;
+    width: 40%;
+ 
+    border: 3px solid red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 15px auto;
+    
+}
+h5{
+  font-size: larger;
+    text-align: center;
+    width: 100%;
+    margin:40px auto 0 auto;
+    padding: 15px 0;
+
+}
+
+.btnCart {
+    margin: 0Px auto 0 auto;
+    display: flex;
+    
+   
+}
+.order:hover{
+    background-color: aquamarine;
+}

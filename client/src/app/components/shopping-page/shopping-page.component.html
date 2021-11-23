@@ -1,0 +1,102 @@
+<div class="sidebarbtn">
+    <button (click)="SideNav()">{{btnSide}}</button>
+    <form *ngIf="!newSearch" [formGroup]="myFormSearch" class="searchPro">
+        <input type="search" formControlName="name" placeholder="Enter product name">
+        <mat-icon (click)="searchProduct($event)">search</mat-icon>
+    </form>
+    <button *ngIf="newSearch" (click)="fornewSearch()">new search</button>
+</div>
+
+<div class="container">
+
+    <div class="first" [ngStyle]="{'display': hidden}">
+
+        <h3>my cart</h3>
+
+        <div class="card">
+            <mat-card *ngFor="let item of cartItem">
+                <mat-card-header>
+                    <mat-card-title>{{item.product.name}}</mat-card-title>
+                    <mat-card-title>amount: {{item.amount}}</mat-card-title>
+                    <mat-card-title>price: {{item.amount * item.product.price| number : '1.2-2'}}</mat-card-title>
+                </mat-card-header>
+                <img mat-card-image src='http://localhost:1000/getimage/{{item.product.img}}'
+                    alt="Photo of product: {{item.product.name}}">
+                <mat-card-content>
+                    <mat-icon class="pro" (click)='deleteItem($event)' id="{{item._id}}">delete</mat-icon>
+                </mat-card-content>
+
+            </mat-card>
+        </div>
+        <h5>
+            total price: {{totalPrice | number : '1.2-2'}}<br>
+        </h5>
+
+        <div *ngIf="cartItem.length" class="btnCart">
+
+            <button class='order' (click)="order()">order</button>
+            <button class='order' (click)='deleteCarts()'>delete all Cart</button>
+        </div>
+
+    </div>
+
+
+    <div class="second" [ngStyle]="{'display': hiddenPopup}">
+        <mat-tab-group mat-align-tabs="center" *ngIf="!showResult">
+            <mat-tab *ngFor="let cat of categories" label={{cat.name}}>
+                <div class="myProducts">
+                    <div *ngFor="let pro of products">
+                        <mat-card *ngIf='cat.name==pro.category.name'>
+                            <mat-card-header>
+                                <mat-card-title>Name: {{pro.name}}</mat-card-title>
+                                <mat-card-subtitle>Category: {{pro.category.name}}</mat-card-subtitle>
+                            </mat-card-header>
+                            <img mat-card-image src='http://localhost:1000/getimage/{{pro.img}}'
+                                alt="Photo of product: {{pro.name}}">
+                            <mat-card-content>
+                                <mat-dialog-content>Price: {{pro.price}}</mat-dialog-content>
+                                <mat-icon (click)='openPop(pro._id,pro.name,pro.price)' class="pro" id="{{pro._id}}">add
+                                </mat-icon>
+                            </mat-card-content>
+                        </mat-card>
+                    </div>
+                </div>
+            </mat-tab>
+        </mat-tab-group>
+
+
+        <div *ngIf="showResult">
+            <div class="myProductsResault">
+                <h1 class="noResault" *ngIf="!answerSearch.length">
+                    Not found product
+                </h1>
+                <mat-card *ngFor="let ser of answerSearch ">
+                    <mat-card-header>
+                        <mat-card-title>Name: {{ser.name}}</mat-card-title>
+                        <mat-card-subtitle>Category: {{ser.category.name}}</mat-card-subtitle>
+                    </mat-card-header>
+                    <img mat-card-image src='http://localhost:1000/getimage/{{ser.img}}'
+                        alt="Photo of product: {{ser.name}}">
+                    <mat-card-content>
+                        <mat-dialog-content>Price: {{ser.price}}</mat-dialog-content>
+                        <mat-icon (click)='openPop(ser._id,ser.name,ser.price)' class="pro" id="{{ser._id}}">add
+                        </mat-icon>
+                    </mat-card-content>
+                </mat-card>
+                <button mat-flat-button color="primary" [ngStyle]="{'width':'100%' ,'height':'50px'}"
+                    (click)="fornewSearch()">back to product</button>
+            </div>
+        </div>
+
+    </div>
+    <div class="popup" [ngStyle]="{'display': showPopup}">
+        <h2> product: {{tempName}}</h2>
+        <form [formGroup]="myFormAddItem" (ngSubmit)='addItemTocart()'>
+            <input min="1" formControlName='amount' type="number">
+            <input type="submit" value="add">
+        </form>
+        <button (click)="clodepop()">cancel </button>
+
+
+    </div>
+</div>

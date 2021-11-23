@@ -1,0 +1,67 @@
+[{
+  "_id": {
+    "$oid": "6059836f58178d2b7c71854a"
+  },
+  "name": "coca cola",
+  "category": {
+    "$oid": "6054cb3a1718ad30c8b17187"
+  },
+  "price": 5.8,
+  "img": "coca cola.png",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "605d2cedd840081e749228b5"
+  },
+  "name": "milk 3% tnuva",
+  "category": {
+    "$oid": "6054cb3a1718ad30c8b17184"
+  },
+  "price": 6.5,
+  "img": "milk 3@ tnuva.png",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "605d40726636ce2cd85578ed"
+  },
+  "name": "milk 1% tnuva",
+  "category": {
+    "$oid": "6054cb3a1718ad30c8b17184"
+  },
+  "price": 9.3,
+  "img": "milk 1@ tnuva.png",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "605e69facd87ed024cf9489a"
+  },
+  "name": "apple",
+  "category": {
+    "$oid": "6054cb3a1718ad30c8b17188"
+  },
+  "price": 3.2,
+  "img": "apple.png",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "605e6f735de5bd4f4403e8b7"
+  },
+  "name": "cheese",
+  "category": {
+    "$oid": "6054cb3a1718ad30c8b17184"
+  },
+  "price": 12.5,
+  "img": "cheese.png",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60695cd94b84d12bc0b7ffa9"
+  },
+  "name": "steak angus",
+  "category": {
+    "$oid": "6054cb3a1718ad30c8b17186"
+  },
+  "price": 89,
+  "img": "steak angus.png",
+  "__v": 0
+}]

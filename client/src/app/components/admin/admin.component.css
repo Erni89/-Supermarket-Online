@@ -1,0 +1,141 @@
+
+
+.myProducts {
+  margin: 5px;
+  height: 90%;
+  transition: margin-left .5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.sidenav {
+  height: 90%;
+  position: fixed;
+  z-index: 1;
+  top: 10;
+  left: 0;
+  background-color: rgba(255, 228, 196, 0.45);
+  overflow-x: hidden;
+  transition: 0.5s;
+  overflow: auto;
+
+  
+}
+
+.add, .closebtn {
+  position: absolute;
+  top: 2%;
+  font-size: xx-large;
+}
+
+.closebtn {
+  right: 5%;
+}
+
+.add {
+  left: 2%;
+}
+
+mat-card {
+  margin: 7px;
+  border: 1px saddlebrown solid;
+}
+
+img {
+  width: 120px;
+  height: 100px;
+  background-size: cover;
+  margin: 0 auto;
+}
+
+mat-card-content {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+mat-card-title {
+  color: blue;
+}
+
+mat-icon:hover {
+  color: blue;
+  cursor: pointer;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 15px;
+}
+
+.mat-tab-body {
+  width: max-content;
+}
+
+.changeImg {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px auto;
+}
+
+.imgUpload {
+  border: 1px solid LightSlateGray;
+  width: 75%;
+}
+
+input {
+  margin: 5px;
+}
+
+.imgUpload:hover {
+  border: 2px solid black;
+}
+
+span:hover {
+  color: blue;
+  cursor: pointer;
+}
+
+.searchPro {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: row;
+}
+
+.header {
+  height: 8%;
+  display: flex;
+  justify-content: first baseline;
+  align-items: center;
+  background-color: #ffb6c194;
+}
+
+.header>* {
+  margin: 5px 20px;
+}
+
+.header>button:hover {
+  background-color: white;
+}
+
+.noResault {
+  text-align: center;
+  margin: 15px auto;
+}
+
+.myProductsResault {
+  margin: 5px;
+  height: 90%;
+  transition: margin-left .5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
